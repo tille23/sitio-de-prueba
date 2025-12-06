@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - EcoMarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar (Same as index) -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-leaf me-2"></i>EcoMarket</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="products.html?cat=frutas">Frutas Orgánicas</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=verduras">Verduras y Hortalizas</a>
+                            </li>
+                            <li><a class="dropdown-item" href="products.html?cat=belleza">Belleza Natural</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=cocina">Cocina y Despensa</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=suplementos">Suplementos</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=tecnologia">Tecnología Eco</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=ropa">Ropa Sostenible</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=hogar">Hogar y Jardín</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+                <div class="d-flex align-items-center">
+                    <a href="cart.html" class="btn btn-outline-dark me-2 position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            id="cart-count">
+                            0
+                        </span>
+                    </a>
+                    <div id="auth-buttons">
+                        <a href="login.html" class="btn btn-primary">Login / Registro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3 mb-4">
+                <div class="card p-3">
+                    <h4>Categorías</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="products.html"
+                                class="text-decoration-none text-dark">Todos</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=frutas"
+                                class="text-decoration-none text-dark">Frutas</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=verduras"
+                                class="text-decoration-none text-dark">Verduras</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=belleza"
+                                class="text-decoration-none text-dark">Belleza</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=cocina"
+                                class="text-decoration-none text-dark">Cocina</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=suplementos"
+                                class="text-decoration-none text-dark">Suplementos</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=tecnologia"
+                                class="text-decoration-none text-dark">Tecnología</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=ropa"
+                                class="text-decoration-none text-dark">Ropa</a></li>
+                        <li class="list-group-item"><a href="products.html?cat=hogar"
+                                class="text-decoration-none text-dark">Hogar</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-md-9">
+                <h2 id="category-title" class="mb-4">Todos los Productos</h2>
+                <div class="row" id="products-container">
+                    <!-- Products rendered via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 EcoMarket. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
